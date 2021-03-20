@@ -17,7 +17,7 @@ interface FoodProps {
   key: number;
   food: IFood;
   handleDelete: (foodId: number) => void;
-  handleEditFood: (food: IFood) => Promise<void>;
+  handleEditFood: (food: IFood) => void;
 }
 
 function Food(props: FoodProps) {
