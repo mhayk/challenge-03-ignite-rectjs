@@ -4,7 +4,7 @@ import ReactModal from 'react-modal';
 interface ModalProps {
   isOpen: boolean;
   children: React.ReactNode;
-  setIsOpen: () => {};
+  setIsOpen: () => void;
 }
 
 function Modal(props: ModalProps) {
@@ -17,7 +17,7 @@ function Modal(props: ModalProps) {
     if (modalStatus !== props.isOpen) {
       setModalStatus(!modalStatus)
     }
-  }, [props.isOpen])
+  }, [props.isOpen, modalStatus])
 
 
   return (
