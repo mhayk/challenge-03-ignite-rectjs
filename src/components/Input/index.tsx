@@ -9,10 +9,12 @@ import { useField } from '@unform/core';
 
 import { Container } from './styles';
 
-interface InputProps {
+interface Props {
   name: string;
-  icon: any;
+  icon?: any;
 }
+
+type InputProps = JSX.IntrinsicElements['input'] & Props
 
 const Input = ({ name, icon: Icon, ...rest }: InputProps) => {
   const inputRef = useRef<HTMLInputElement>(null);
